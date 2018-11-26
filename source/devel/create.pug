@@ -1,0 +1,87 @@
+extends index.pug
+block title
+	title Page
+block content
+	.mdl-grid
+		.mdl-cell.mdl-cell--12-col
+			h2 Name
+		.mdl-cell.mdl-cell--6-col
+			button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored
+				i.material-icons play_arrow
+			button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored
+				i.material-icons pause
+		.mdl-cell.mdl-cell--6-col.text-right
+			button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored
+				i.material-icons edit
+		.mdl-cell.mdl-cell--12-col
+			form(action='#').mdl-grid
+				.mdl-cell.mdl-cell--2-col
+					.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+						input#row.mdl-textfield__input(type='text', pattern='-?[0-9]*(\.[0-9]+)?')
+						label.mdl-textfield__label(for='row') Row
+						span.mdl-textfield__error Input is not a number!
+
+						button#menu_row.mdl-button.mdl-js-button.mdl-button--icon
+							i.material-icons more_vert
+						ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect(for='menu_row')
+							li.mdl-menu__item 1
+							li.mdl-menu__item 2
+							li.mdl-menu__item 3
+							li.mdl-menu__item 4
+							li.mdl-menu__item 5
+							li.mdl-menu__item 6
+							li.mdl-menu__item 7
+							li.mdl-menu__item 8
+							li.mdl-menu__item 9
+							li.mdl-menu__item 10
+				.mdl-cell.mdl-cell--2-col
+					.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+						input#col.mdl-textfield__input(type='text', pattern='-?[0-9]*(\.[0-9]+)?')
+						label.mdl-textfield__label(for='col') Col
+						span.mdl-textfield__error Input is not a number!
+
+						button#menu_col.mdl-button.mdl-js-button.mdl-button--icon
+							i.material-icons more_vert
+						ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect(for='menu_col')
+							li.mdl-menu__item 4
+							li.mdl-menu__item 8
+							li.mdl-menu__item 16
+							li.mdl-menu__item 32
+							li.mdl-menu__item 64
+
+				.mdl-cell.mdl-cell--4-col
+					button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button-add#add_table
+						i.material-icons check
+					button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button-add#clear_table
+						i.material-icons clear
+					button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button-add#delete_table
+						i.material-icons delete
+		
+		.mdl-cell.mdl-cell--12-col#for_table 1
+			//- table#sequencer.sequencer
+		
+		
+		
+		
+		
+		
+		//- .mdl-cell.mdl-cell--12-col
+		//- 	table.sequencer
+		//- 		tr
+		//- 			th 1
+		//- 			th 2
+		//- 			th 3
+		//- 			th 4
+		//- 			th 5
+		//- 		tr.x1
+		//- 			td.name
+		//- 			td.name
+		//- 			td.name
+		//- 			td.name
+		//- 			td.name
+		//- 		tr.x2
+		//- 			td.name
+		//- 			td.name
+		//- 			td.name
+		//- 			td.name
+		//- 			td.name

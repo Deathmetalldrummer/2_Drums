@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"installs":"npm run script1 && npm run script2",
+		"installs": "npm run script1 && npm run script2",
 		"installPackages": "npm i -D bower browser-sync del gulp gulp-autoprefixer gulp-clean-css gulp-concat gulp-jade gulp-plumber gulp-pug gulp-rename gulp-sass gulp-uglify node-sass run-sequence",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},

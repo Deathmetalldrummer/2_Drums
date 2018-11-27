@@ -22,15 +22,59 @@ body
 
 //sequencer
 .sequencer
+	border-collapse: collapse
 	th
 	tr
 	td
-		padding: 10px
-
-
+	.mdl-grid
+		padding: 0
+	.mdl-cell
+		margin: 0
+	.drum_matrix
+		width: 30px
+		height: 30px
+		border-radius: 100%
+		cursor: pointer
+		transition-duration: 0.2s
+		background-color: #e4e4e4
+		&:hover
+			background-color: #939393
+		&.active
+			background-color: #ff5723
+	// &_edit
+	.drum_name_save
+		display: none
+	// 	.drum_name,.drum_type
+	// 		display: block !important
+	// & .drum_name,.drum_type
+	// 	display: none
+.drum_name .mdl-textfield
+	padding-bottom: 0
+	padding-top: 0
+	.mdl-textfield__label
+		top: 4px
+		&::after
+			bottom: 0
+.save_edit
+	.icon_edit,
+	.icon_save
+		transition-duration: 0.3s
+	&.save
+		.icon_edit
+			top: -100%
+		.icon_save
+			top: 50%
+	&.edit
+		.icon_edit
+			top: 50%
+		.icon_save
+			top: -100%
 .mdl-textfield .mdl-button
 	right: 0
-.mdl-textfield__input
+.edit_panel .mdl-textfield__input
 	padding-right: 35px
 .mdl-button-add
 	margin-top: 10px
+.for_sequencer
+	overflow-x: auto
+	padding-bottom: 30px

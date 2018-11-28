@@ -2,7 +2,15 @@ var obj = {
 	name: 'name1',
 	id: 0,
 	html: "",
-	pattern: [],
+	patterns: [{
+		drum_name: 'first',
+		drum_type: 'type1',
+		pattern: [0,0,0,0,0,0,0,1]
+	},{
+		drum_name: 'second',
+		drum_type: 'type1',
+		pattern: [1,0,0,0,0,0,0,1]
+	}],
 }
 
 $('#add_table').on('click',function () {
@@ -85,7 +93,7 @@ $('#add_table').on('click',function () {
 			}
 			if (tbody_tr_td_length < number_of_col) {
 				for (var j = 0; j < (number_of_col - tbody_tr_td_length); j++) {
-					tr.append($('<td>1</td>'))
+					tr.append($('<td><div class="drum_matrix" data-col="'+(tbody_tr_td_length+j)+'" data-row="'+i+'" data-value="0"></div></td>'));
 				}
 				tbody_tr_td_length = tr.find('td').length;
 			}
@@ -126,7 +134,6 @@ $('.save_edit').on('click', function () {
 		write_object();
 	}
 })
-
 
 function write_object() {
 	var write_rows = $('#sequencer').find('tbody tr');

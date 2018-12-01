@@ -1,50 +1,18 @@
 extends index.pug
 block title
-	title Page
+	title Sequencer
 block content
-	.mdl-grid
-		.mdl-cell.mdl-cell--12-col#nameee
-			h2 Name
-		.mdl-cell.mdl-cell--6-col
-			button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored
-				i.material-icons play_arrow
-			button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored
-				i.material-icons pause
-		.mdl-cell.mdl-cell--6-col.text-right
-			button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored.save_edit.save
-				i.material-icons.icon_save check
-				i.material-icons.icon_edit edit
-		.mdl-cell.mdl-cell--12-col
-			.mdl-grid.edit_panel
-				.mdl-cell.mdl-cell--2-col
-					.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-						input#row.mdl-textfield__input(type='text', pattern='-?[0-9]*(\.[0-9]+)?')
-						label.mdl-textfield__label(for='row') Row
-						span.mdl-textfield__error Input is not a number!
-				.mdl-cell.mdl-cell--2-col
-					.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-						input#col.mdl-textfield__input(type='text', pattern='-?[0-9]*(\.[0-9]+)?')
-						label.mdl-textfield__label(for='col') Col
-						span.mdl-textfield__error Input is not a number!
-				.mdl-cell.mdl-cell--4-col
-					button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button-add#add_table
-						i.material-icons check
-					button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button-add#clear_table
-						i.material-icons clear
-					button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button-add#delete_table
-						i.material-icons delete
+	include ./_layout/_sequencer/_sequencer
 		
-		.mdl-cell.mdl-cell--12-col#for_sequencer.for_sequencer
 
 
-
-	//- .mdl-grid
-	//- 	.mdl-cell.mdl-cell--10-col.drum_name
-	//- 		.mdl-textfield.mdl-js-textfield
-	//- 			input#drum_name.mdl-textfield__input(type='text')
-	//- 			label.mdl-textfield__label(for='drum_name') Text...
-	//- 	.mdl-cell.mdl-cell--2-col.drum_type
-	//- 		button#drum_type.mdl-button.mdl-js-button.mdl-button--icon
-	//- 			i.material-icons more_vert
-	//- 		ul.mdl-menu.mdl-menu--bottom-left.mdl-js-menu.mdl-js-ripple-effect(for='drum_type')
-	//- 			li.mdl-menu__item Some Action
+//- .mdl-grid
+//- 	.mdl-cell.mdl-cell--10-col.drum_name
+//- 		.mdl-textfield.mdl-js-textfield
+//- 			input#drum_name.mdl-textfield__input(type='text')
+//- 			label.mdl-textfield__label(for='drum_name') Text...
+//- 	.mdl-cell.mdl-cell--2-col.drum_type
+//- 		button#drum_type.mdl-button.mdl-js-button.mdl-button--icon
+//- 			i.material-icons more_vert
+//- 		ul.mdl-menu.mdl-menu--bottom-left.mdl-js-menu.mdl-js-ripple-effect(for='drum_type')
+//- 			li.mdl-menu__item Some Action

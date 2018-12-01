@@ -10,44 +10,11 @@ html(lang="en")
 		block title
 			title Drums
 	body
-		.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
-			header.mdl-layout__header
-				.mdl-layout__header-row
-					span.mdl-layout-title Drums
-					.mdl-layout-spacer
-					nav.mdl-navigation.mdl-layout--large-screen-only
-						a.mdl-navigation__link(href='./index.html') Home
-						a.mdl-navigation__link(href='./create.html') Create
-			.mdl-layout__drawer
-				span.mdl-layout-title Drums
-				nav.mdl-navigation
-					a.mdl-navigation__link(href='') Link1
-					a.mdl-navigation__link(href='') Link2
-					a.mdl-navigation__link(href='') Link3
-					a.mdl-navigation__link(href='') Link4
-			main.mdl-layout__content
-				.page-content
-					.mdl-grid
-						.mdl-cell.mdl-cell--12-col
-							block content
-								ul.demo-list-icon.mdl-list
-									li.mdl-list__item
-										span.mdl-list__item-primary-content
-											i.material-icons.mdl-list__item-icon insert_drive_file
-											a(href="#") list 1
-									li.mdl-list__item
-										span.mdl-list__item-primary-content
-											i.material-icons.mdl-list__item-icon insert_drive_file
-											a(href="#") list 2
-									li.mdl-list__item
-										span.mdl-list__item-primary-content
-											i.material-icons.mdl-list__item-icon insert_drive_file
-											a(href="#") list 3
+		include ./_layout/_header/_header
+
+	script(src='../../bower_components/jquery/dist/jquery.js')
+	script(src="../../bower_components/material-design-lite/material.min.js")
+	script(src='./index.js')
 
 
-
-		//- include ./_layout/_header/_header
-		//- include ./_layout/_footer/_footer
-		script(src='../../bower_components/jquery/dist/jquery.js')
-		script(src="../../bower_components/material-design-lite/material.min.js")
-		script(src='./index.js')
+	

@@ -1,0 +1,20 @@
+.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+	header.mdl-layout__header
+		.mdl-layout__header-row
+			span.mdl-layout-title Drums
+			.mdl-layout-spacer
+			nav.mdl-navigation.mdl-layout--large-screen-only
+				a.mdl-navigation__link(href='./index.html') Home
+				a.mdl-navigation__link(href='./create.html') Create
+	.mdl-layout__drawer
+		span.mdl-layout-title Drums
+		nav.mdl-navigation
+			a.mdl-navigation__link(href='') Link1
+			a.mdl-navigation__link(href='') Link2
+			a.mdl-navigation__link(href='') Link3
+			a.mdl-navigation__link(href='') Link4
+	main.mdl-layout__content
+		.page-content.mdl-grid
+			block content
+				include ../_list/_list
+				

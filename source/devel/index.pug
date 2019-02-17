@@ -10,7 +10,11 @@ html(lang="en")
 		block title
 			title Drums
 	body
-		include ./_layout/_header/_header
+		.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+			include ./_layout/_header/_header
+			include ./_layout/_drawer/_drawer
+			include ./_layout/_content/_content
+			block foot
 
 	script(src='../../bower_components/jquery/dist/jquery.js')
 	script(src="../../bower_components/material-design-lite/material.min.js")

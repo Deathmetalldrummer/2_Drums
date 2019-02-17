@@ -1,7 +1,7 @@
 function sequencer_setting() {
 	var patterns = JSON.parse(localStorage.getItem('drums')) || null;
 	var pattern_id = $('.page-content').attr('data-pattern');
-	componentHandler.upgradeElements($('.page-content'));
+	componentHandler.upgradeElements($('.page-content,.mdl-mega-footer'));
 	if (patterns && pattern_id) {
 		var pattern = patterns[pattern_id];
 		sequencer(pattern)

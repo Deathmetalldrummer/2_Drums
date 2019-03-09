@@ -1,0 +1,18 @@
+mixin button__submit(title= 'Ok')
+	button.button.button__submit= title
+
+mixin button__action(type)
+	button.button.button__action
+		case type
+			when 'play'
+				+SVG_play()
+			when 'stop'
+				+SVG_stop()
+			when 'pause'
+				+SVG_pause()
+			when 'pencil'
+				+SVG_pencil()
+			when 'check'
+				+SVG_check()
+			default
+				| x

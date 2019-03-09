@@ -1,0 +1,52 @@
+.input__container
+	display: inline-block
+	position: relative
+	font-size: 1rem
+	padding: 0.3em
+	&_dark
+		color: #000
+	&_light
+		color: #fff
+.input
+	border: none
+	outline: none
+	border-bottom: 1px solid rgba(0,0,0,.2)
+	background-color: transparent
+	width: 100%
+	font-size: 1em
+	padding: 0.3em 0
+	color: inherit
+	&:valid,&:focus
+		& ~ .input__title
+			top: -0.5em
+			font-size: 0.8rem
+			cursor: default
+			.input__container_dark &
+				color: $color_accent
+			.input__container_light &
+				color: #fff
+		& ~ .input__active
+				left: 0.3em
+				right: 0.3em
+	&:invalid
+.input__title
+	position: absolute
+	top: 0.8em
+	font-size: 1em
+	cursor: text
+	color: inherit
+	transition-duration: 0.2s
+.input__active
+	transition-duration: 0.2s
+	position: absolute
+	bottom: 0.3em
+	left: 50%
+	right: 50%
+	content: ''
+	display: block
+	margin: auto
+	height: 2px
+	.input__container_dark &
+		background: $color_accent
+	.input__container_light &
+		background: #fff

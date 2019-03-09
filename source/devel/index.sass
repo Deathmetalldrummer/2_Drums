@@ -1,9 +1,30 @@
+@import "./_module/_font/_font"
+@import "./_module/_grid/_grid"
+@import "./_module/_utils/_variables"
+@import "./_ui/_buttons/_button"
+@import "./_ui/_inputs/_input"
+@import "./_layout/_header/_header"
+@import "./_layout/_ctrl_panel/_ctrl_panel"
+@import "./_layout/_sequencer/_sequencer"
 html
 	font-size: 16px
 body
 	margin: 0
 *
 	box-sizing: border-box
+svg
+	height: 1em
 
-@import "./_module/_font/_font"
-@import "./_module/_grid/_grid"
+
+.wrapper
+	height: 100vh
+	width: 100vw
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+.wrapper__header
+	background-color: $color_accent
+.wrapper__body
+	flex-grow: 1
+.wrapper__footer
+	background-color: $color_secondary

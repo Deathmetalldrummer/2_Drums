@@ -1,0 +1,8 @@
+mixin input(id,color='dark')
+	- var _color = (color === 'dark') ? 'dark' : (color === 'light') ? 'light' : 'dark';
+	.input__container(class='input__container_' + _color)
+		input.input(type='text' id= id required)
+		span.input__active
+		label.input__title(for= id)
+			if block
+				block

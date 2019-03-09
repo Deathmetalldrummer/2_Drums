@@ -1,3 +1,7 @@
+include ./_module/_svg/_svg
+include ./_ui/_buttons/_button
+include ./_ui/_inputs/_input
+
 <!DOCTYPE html>
 html(lang="en")
 	head
@@ -7,7 +11,12 @@ html(lang="en")
 		link(rel="stylesheet", href="./index.css")
 		title Archetype
 	body
-		include ./_layout/_header/_header
-		include ./_layout/_footer/_footer
+		.wrapper
+			.wrapper__header
+				include ./_layout/_header/_header
+			.wrapper__body
+				include ./_layout/_sequencer/_sequencer
+			.wrapper__footer
+				include ./_layout/_ctrl_panel/_ctrl_panel
 		script(src='../../bower_components/jquery/dist/jquery.js')
 		script(src='./index.js')

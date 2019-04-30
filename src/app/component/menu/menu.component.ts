@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
-  templateUrl: './menu.component.html',
+  templateUrl: './menu.component.pug',
   styleUrls: ['./menu.component.sass']
 })
 export class MenuComponent {
